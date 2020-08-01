@@ -25,7 +25,7 @@ app.use('/', routesPost);
 // })
 mongoose.connect("mongodb+srv://ankita:ankitab@rishabt123.gesdw.mongodb.net/testing?retryWrites=true&w=majority", { useNewUrlParser: true } ).then(res=>{
     console.log("Dumb")
-    app.listen(process.env.port || 3000 , ()=>{
+    app.listen(process.env.PORT || 3000 , ()=>{
         console.log("Listening")
       
       })
