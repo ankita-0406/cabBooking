@@ -7,7 +7,8 @@ app.use(cors());
 
 //mongoose
 const mongoose = require("mongoose");
-mongoose.connect("mongodb://localhost:27017/config", { useNewUrlParser: true } );
+
+
 
 //import routes
 const bodyParser = require("body-parser");
@@ -17,8 +18,16 @@ const routesPost = require("./routes/routes");
 app.use('/', routesPost);
 
 
-app.listen(27017);
+
 // app.listen(4000, ()=>{
 //     mongoose.connect("mongodb://localhost:27017/config");
 //     console.log("connected to db");
 // })
+mongoose.connect("mongodb+srv://ankita:ankitab@rishabt123.gesdw.mongodb.net/testing?retryWrites=true&w=majority", { useNewUrlParser: true } ).then(res=>{
+    console.log("Dumb")
+    app.listen(3000 , ()=>{
+        console.log("Listening")
+      
+      })
+   
+});
